@@ -1,0 +1,46 @@
+<entité>
+client
+- id
+- nom
+- adresse
+
+installateur
+- id
+- nom
+
+appareil
+- id
+- marque
+
+contrat
+- id
+- date de début
+- date de fin
+</entité>
+
+<association>
+intervenir (type,statut, date)
+- contrat 0,N
+- installateur 0,N
+
+lier 
+- client 0,N
+- appareil 0,N 
+- contrat 1,1
+<association>
+<MLD>
+
+contrat
+	id contrat,
+	date début,
+	date de fin
+	idclient
+	idappareil
+	
+intervention
+	type,
+	statut
+	date
+	idcontrat
+	idinstallateur
+</MLD>
